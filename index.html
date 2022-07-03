@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<link href="/CC016-business_card_fandom/business_card.css" rel="stylesheet" type="text/css">
+<script src="https://unpkg.com/phosphor-icons"></script>
+
+<div class="business-card">
+  <div class="business-card-front">
+    <div id="particles-js"></div>
+    <div class="sigil">
+      <img src="https://cdn.discordapp.com/attachments/744259364772118559/950463423727169556/marmora_sigil.png">
+    </div>
+    <div class="organization">
+      TEST <br>TESTING
+    </div>
+  </div>
+  <div class="business-card-back">
+    <name>Test</name>
+    <job>blade captain</job>
+    <currently>
+      currently: <b>online</b>
+    </currently>
+    <scan><i class="ph-user-focus-thin"></i></scan>
+    <contact>scan face to <br>request contact</contact>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		  <title>Test XAT Profile</title>
+           <style>
+		  @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+@font-face {
+  font-family: 'Exan Regular';
+  src: url(https://files.jcink.net/uploads/summertests/fonts/Exan_Regular.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: hsl(var(--background));
+
+  /*FONTS*/
+  --display-font: 'Exan Regular';
+  --mono-font: 'Syne Mono';
+
+  /*COLORS*/
+  --clear: hsla(0, 0%, 0%, 0);
+  --background: 263, 19%, 6%;
+  --shadow: 263, 19%, 4%;
+  --black: 263, 19%, 14%;
+  --white: 263, 49%, 84%;
+  --purple: 263, 49%, 44%;
+  --bright-burple: 263, 49%, 84%;
+
+  /*GRADIENTS*/
+
+
+  /*IMAGES*/
+  --marmora: url('https://cdn.discordapp.com/attachments/744259364772118559/950463423727169556/marmora_sigil.png');
+
+  /*OTHER*/
+
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+a { text-decoration: none; }
+
+.business-card {
+  margin: 2rem auto;
+  width: 230px;
+  height: 400px;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+}
+
+.business-card-front, .business-card-back {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 2rem;
+  background: hsl(var(--black));
+  box-shadow: 0 0 7px hsl(var(--shadow));
+  color: rgb(var(--text-color));
+  overflow: hidden;
+  transition: .5s linear;
+}
+
+.business-card-front {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+.business-card-back {
+  transform: rotateY(180deg);
+  opacity: 0;
+  position: relative;
+  font: .7rem/1.8 var(--mono-font);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1rem;
+  color: hsla(var(--white), .7);
+  display: flex;
+  flex-flow: column nowrap;
+}
+.business-card-back::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: hsla(var(--black), .5);
+  mix-blend-mode: multiply;
+}
+.business-card-back name {
+  display: block;
+  font: 1.25rem/1.8 var(--display-font);
+  text-shadow: 0 0 2px hsl(var(--white));
+  position: relative;
+  z-index: 2;
+}
+.business-card-back job {
+  display: block;
+}
+.business-card-back currently {
+  display: block;
+  margin: 30px auto;
+  position: relative;
+  z-index: 2;
+}
+.business-card-back currently b {
+  color: hsl(var(--bright-purple));
+  text-shadow: 0 0 1px hsl(var(--white));
+}
+.business-card-back scan {
+  display: block;
+  margin: auto;
+  font-size: 5rem;
+  filter: drop-shadow(0 0 5px hsl(var(--white)));
+}
+.business-card-back contact {
+  display: block;
+  margin-top: auto;
+}
+
+.business-card:hover .business-card-front {
+  transform: rotateY(180deg);
+  opacity: 0;
+  transition: .5s linear;
+}
+.business-card:hover .business-card-back {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transition: .5s linear;
+}
+
+.business-card .business-card-front .sigil img {
+  width: 40px;
+  margin: 0 auto 50px auto;
+  filter: drop-shadow(0 0 25px hsl(var(--purple)));
+}
+
+.business-card .business-card-front .organization {
+  font: .55rem/1.5 var(--display-font);
+  letter-spacing: .3rem;
+  text-align: center;
+  color: hsl(var(--white));
+  text-shadow: 
+    0 0px 5px hsla(var(--purple));
+}
+
+.credits {
+  width: 230px;
+  margin: 0 auto;
+  font: .7rem/1 var(--mono-font);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1rem;
+  color: hsla(var(--white), .2);
+}
+.credits a {
+  color: hsla(var(--purple), .7);
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#particles-js::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: hsla(var(--black), .5);
+  mix-blend-mode: multiply;
+}
+</style>
+
+<script>
+ particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 355,
+      "density": {
+        "enable": true,
+        "value_area": 789.1476416322727
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.48927153781200905,
+      "random": false,
+      "anim": {
+        "enable": true,
+        "speed": 0.2,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 2,
+        "size_min": 0,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.2,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 83.91608391608392,
+        "size": 1,
+        "duration": 3,
+        "opacity": 1,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
